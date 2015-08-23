@@ -115,7 +115,7 @@ Now we can see how our model behaves with the new data, provided in another file
 
 ```{r,message=F,warning=F}
 #Read data
-Datatest<-read.csv("pml-training.csv",header=TRUE)
+Datatest<-read.csv("pml-testing.csv",header=TRUE)
 dim(Datatest)
 ```
 
@@ -129,8 +129,7 @@ Datatest<-as.data.frame(sapply(Datatest,as.numeric))
 ```
 
 ```{r,message=F,warning=F,eval=F}
-testtest<-predict(model,Datatest[,-ncol(Datatest)])
-print(testtest)
+testtest<-predict(model,Datatest)
 ```
 
 
